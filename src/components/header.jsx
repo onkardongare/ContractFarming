@@ -21,7 +21,11 @@ function Header() {
             <LanguageSelector />
         </div>
         <Link to="/login" className="flex-none w-20 ml-10 ">
-                <img alt="logo" src={loginlogo} className='loginlogo' />
+                <span>
+                  <img alt="logo" src={loginlogo} className='loginlogo' />
+                  <p>log in</p>
+                </span>
+                
         </Link>
       </nav>
     </header>

@@ -1,0 +1,25 @@
+.registration-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 15px 30px;
+    font-size: 3rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .btn-farmer:hover, .btn-buyer:hover {
+    background-color: #58855b;
+  }
+  
+  .or {
+    font-size: 1.2rem;
+    color: white;
+  }
+  

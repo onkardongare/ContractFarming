@@ -1,5 +1,6 @@
 import Header from "../components/header";
 import HeroSection from "../components/herosection";
+import RegistrationButtons from "../components/registerationbuttons";
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <>
             <Header/>
             <HeroSection/>
+            <RegistrationButtons/>
         </>
         
     )
