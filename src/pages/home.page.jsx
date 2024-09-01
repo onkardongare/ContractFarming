@@ -1,6 +1,14 @@
+import Header from "../components/header";
+import HeroSection from "../components/herosection";
+
+
 const Home = () => {
     return(
-        <h1>Home</h1>
+        <>
+            <Header/>
+            <HeroSection/>
+        </>
+        
     )
 }
 
