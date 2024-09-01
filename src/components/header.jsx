@@ -16,7 +16,7 @@ function Header() {
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#contact">Contact Us</a>
-        <img src={langchange} className='langchangeimg h-10'/>
+        <img alt='language-change-option' src={langchange} className='langchangeimg h-10'/>
         <div className="language-selector">
             <LanguageSelector />
         </div>
