@@ -19,7 +19,7 @@ const DefaultHome = () => {
   return (
     <div className={`font-sans bg-gray-900 text-white }`}>
       <header className="p-4 flex justify-between items-center bg-green-600 text-white pb-6">
-      <Link to="/">
+        <Link to="/">
           <p className="text-2xl font-semibold font-serif ml-2 md:hidden">
             🌱 
           </p>
@@ -27,6 +27,7 @@ const DefaultHome = () => {
             🌱 Assured Contract Farming
           </p>
         </Link>
+
         <nav className="flex items-center gap-6">
           <Link to="/" className='ml-4 hover:underline'>
             Home
@@ -38,18 +39,18 @@ const DefaultHome = () => {
             Contact
           </Link>
           <Link to="/login">
-          <button
-            type="button"
-            className="rounded bg-neutral-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-600 shadow-light-3 transition duration-150 ease-in-out hover:bg-neutral-200 hover:shadow-light-2 focus:bg-neutral-200 focus:shadow-light-2 focus:outline-none focus:ring-0 active:bg-neutral-200 active:shadow-light-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
-            Login
-          </button>
+            <button
+              type="button"
+              className="rounded bg-neutral-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-600 shadow-light-3 transition duration-150 ease-in-out hover:bg-neutral-200 hover:shadow-light-2 focus:bg-neutral-200 focus:shadow-light-2 focus:outline-none focus:ring-0 active:bg-neutral-200 active:shadow-light-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
+              Login
+            </button>
           </Link>
         </nav>
       </header>
 
       <main>
         <section className="bg-green-100 dark:bg-green-800 p-16 text-center  bg-cover bg-center filter backdrop-blur-lg " style={{ backgroundImage: `url(${backgroundImage})` }}>
-          <h1 className="text-4xl bg-black font-bold mb-4 bg-opacity-50 text-yellow-400 rounded-lg">Assured Contract Farming</h1>
+          <h1 className="text-6xl bg-black font-bold mb-6 bg-opacity-50 text-yellow-400 rounded-lg">Assured Contract Farming</h1>
           <p className=" bg-black bg-opacity-35 text-xl max-w-2xl mx-auto mb-8 text-white-500 rounded-lg">
             Connecting farmers with buyers for sustainable and profitable agriculture.
           </p>
@@ -58,9 +59,9 @@ const DefaultHome = () => {
           >
             Get Started
           </Link>
-          <button className="px-6 py-3 bg-white text-green-600 rounded-lg border border-green-600 hover:bg-green-50 transition duration-300">
+          {/* <button className="px-6 py-3 bg-white text-green-600 rounded-lg border border-green-600 hover:bg-green-50 transition duration-300">
             Learn More
-          </button>
+          </button> */}
         </section>
 
         <section className="p-16">
