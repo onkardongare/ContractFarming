@@ -20,7 +20,7 @@ const DefaultHome = () => {
     <div className={`font-sans bg-gray-900 text-white }`}>
       <header className="p-4 flex justify-between items-center bg-green-600 text-white pb-6">
         <Link to="/">
-          <p className="text-2xl font-semibold font-serif ml-2 md:hidden">
+          <p className="text-2xl font-semibold md:hidden">
             🌱 
           </p>
           <p className="text-2xl font-semibold font-sans ml-2 hidden md:block">
@@ -28,14 +28,14 @@ const DefaultHome = () => {
           </p>
         </Link>
 
-        <nav className="flex items-center gap-6">
-          <Link to="/" className='ml-4 hover:underline'>
+        <nav className="flex items-center gap-4">
+          <Link to="/" className='ml-4 hover:underline hidden sm:block'>
             Home
           </Link>
           <Link to="/about" className='ml-4 hover:underline'>
             About
           </Link>
-          <Link to="/contact" className='ml-4 hover:underline'>
+          <Link to="/contact" className='ml-4 mr-3 hover:underline'>
             Contact
           </Link>
           <Link to="/login">
@@ -49,11 +49,11 @@ const DefaultHome = () => {
       </header>
 
       <main>
-        <section className="bg-green-100 dark:bg-green-800 p-16 text-center  bg-cover bg-center filter backdrop-blur-lg " style={{ backgroundImage: `url(${backgroundImage})` }}>
-          <h1 className="text-6xl bg-black font-bold mb-6 bg-opacity-50 text-yellow-400 rounded-lg">Assured Contract Farming</h1>
-          <p className=" bg-black bg-opacity-35 text-xl max-w-2xl mx-auto mb-8 text-white-500 rounded-lg">
+        <section className="bg-green-100 dark:bg-green-800 p-24 text-center  bg-cover bg-center filter backdrop-blur-lg " style={{ backgroundImage: `url(${backgroundImage})` }}>
+          <h1 className="text-4xl bg-black font-bold mb-8 bg-opacity-60 text-yellow-400 rounded-lg pb-3 pt-2">Assured Contract Farming</h1>
+          {/* <p className=" bg-black bg-opacity-35 text-xl max-w-2xl mx-auto mb-8 text-white-500 rounded-lg">
             Connecting farmers with buyers for sustainable and profitable agriculture.
-          </p>
+          </p> */}
           <Link to='signup'
             className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300 mr-4"
           >
