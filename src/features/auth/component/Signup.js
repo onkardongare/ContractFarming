@@ -24,7 +24,7 @@ export default function Signup() {
             🌱
             </div>
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Sign in to your account
+              Sign Up Your Account
             </h2>
           </div>
   
@@ -98,9 +98,6 @@ export default function Signup() {
   
               <div>
                 <div className="flex items-center justify-between">
-                  <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                    Password
-                  </label>
                   <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
                     Confirm Password
                   </label>
