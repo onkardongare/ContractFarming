@@ -20,10 +20,10 @@ const DefaultHome = () => {
     <div className={`font-sans bg-gray-900 text-white }`}>
       <header className="p-4 flex justify-between items-center bg-green-600 text-white pb-6">
       <Link to="/">
-          <p className="text-2xl font-semibold font-serif ml-2 sm:hidden">
+          <p className="text-2xl font-semibold font-serif ml-2 md:hidden">
             🌱 
           </p>
-          <p className="text-2xl font-semibold font-sans ml-2 hidden sm:block">
+          <p className="text-2xl font-semibold font-sans ml-2 hidden md:block">
             🌱 Assured Contract Farming
           </p>
         </Link>
@@ -102,7 +102,7 @@ const DefaultHome = () => {
       </main>
 
       <footer className="bg-white text-black p-8 text-center">
-        <p className="mb-4 ">© 2024 Assured Contract Farming. All rights reserved.</p>
+        <p className="mb-4 text-xl">© 2024 Assured Contract Farming. All rights reserved.</p>
         <div>
           <a href="#" className="hover:underline mr-4">Terms of Service</a>
           <a href="#" className="hover:underline">Privacy Policy</a>

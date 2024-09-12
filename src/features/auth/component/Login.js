@@ -25,7 +25,7 @@ export default function Login() {
             🌱
             </div>
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-               Login to your account
+               Login To Your Account
             </h2>
           </div>
   
