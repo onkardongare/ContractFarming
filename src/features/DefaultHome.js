@@ -18,14 +18,32 @@ const DefaultHome = () => {
 
   return (
     <div className={`font-sans bg-gray-900 text-white }`}>
-      <header className="p-4 flex justify-between items-center bg-green-600 text-white">
-        <div className="text-2xl font-bold">🌱 Assured Contract Farming</div>
-        <nav className="flex items-center">
-          {['Home', 'About', 'Services', 'Contact'].map((item) => (
-             item != 'Contact'?
-            <a key={item} href="#" className="ml-4 hover:underline">{item}</a>
-            : <Link to='/contact'className="ml-4 hover:underline">{item}</Link>
-          ))}
+      <header className="p-4 flex justify-between items-center bg-green-600 text-white pb-6">
+      <Link to="/">
+          <p className="text-2xl font-semibold font-serif ml-2 sm:hidden">
+            🌱 
+          </p>
+          <p className="text-2xl font-semibold font-sans ml-2 hidden sm:block">
+            🌱 Assured Contract Farming
+          </p>
+        </Link>
+        <nav className="flex items-center gap-6">
+          <Link to="/" className='ml-4 hover:underline'>
+            Home
+          </Link>
+          <Link to="/about" className='ml-4 hover:underline'>
+            About
+          </Link>
+          <Link to="/contact" className='ml-4 hover:underline'>
+            Contact
+          </Link>
+          <Link to="/login">
+          <button
+            type="button"
+            className="rounded bg-neutral-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-600 shadow-light-3 transition duration-150 ease-in-out hover:bg-neutral-200 hover:shadow-light-2 focus:bg-neutral-200 focus:shadow-light-2 focus:outline-none focus:ring-0 active:bg-neutral-200 active:shadow-light-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
+            Login
+          </button>
+          </Link>
         </nav>
       </header>
 
@@ -35,7 +53,7 @@ const DefaultHome = () => {
           <p className=" bg-black bg-opacity-35 text-xl max-w-2xl mx-auto mb-8 text-white-500 rounded-lg">
             Connecting farmers with buyers for sustainable and profitable agriculture.
           </p>
-          <Link to='login'
+          <Link to='signup'
             className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300 mr-4"
           >
             Get Started
@@ -81,14 +99,10 @@ const DefaultHome = () => {
             ))}
           </div>
         </section>
-
-        {/* <section className="p-16 text-center">
-     
-        </section> */}
       </main>
 
-      <footer className="bg-green-600 text-white p-8 text-center">
-        <p className="mb-4">© 2024 Assured Contract Farming. All rights reserved.</p>
+      <footer className="bg-white text-black p-8 text-center">
+        <p className="mb-4 ">© 2024 Assured Contract Farming. All rights reserved.</p>
         <div>
           <a href="#" className="hover:underline mr-4">Terms of Service</a>
           <a href="#" className="hover:underline">Privacy Policy</a>
