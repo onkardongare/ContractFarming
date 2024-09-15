@@ -17,6 +17,7 @@ import Protected from './features/auth/component/Protected';
 import LogOut from './features/auth/component/Logout'
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import ContactPage from './pages/ContactPage';
+import Search from './features/Search';
 
 
 const options = {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
     path: '*',
     element: <PageNotFound></PageNotFound>,
   },
+  {
+    path: '/search',
+    element:<Search></Search>
+  }
 ]);
 
 function App() {
