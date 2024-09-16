@@ -9,9 +9,9 @@ export default function HomeContent() {
 
   const calculateEarnings = () => {
     const baseEarnings = {
-      wheat: 600,
-      corn: 800,
-      soybeans: 700
+      wheat: 60000,
+      corn: 70000,
+      soybeans: 19000
     }
     return (parseFloat(acres) * baseEarnings[crop]).toFixed(2)
   }
@@ -44,7 +44,7 @@ export default function HomeContent() {
               </p>
               <div className="flex justify-center mb-4">
                 {action === 'View Contracts' && <FileText className="h-12 w-12 text-blue-600" />}
-                {action === 'Find Buyers' && <Search className="h-12 w-12 text-green-600" />}
+                {action === 'Find Buyers' &&  <Search className="h-12 w-12 text-green-600" />}  
                 {action === 'Create Contract' && <PlusCircle className="h-12 w-12 text-purple-600" />}
               </div>
               <button className="bg-blue-500 text-white px-4 py-2 rounded-md flex items-center justify-center w-full">
@@ -76,7 +76,7 @@ export default function HomeContent() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Stable Income</h3>
                 <p className="text-gray-600 mb-4">Secure your financial future with predetermined prices.</p>
-                <DollarSign className="h-12 w-12 mb-4 text-green-600" />
+                <p className="h-12 w-12 mb-4 text-4xl text-green-600"> ₹</p>
                 <p>With contract farming, you'll know your income before you even plant. Our agreements guarantee a fair price for your crops, protecting you from market fluctuations.</p>
               </div>
             )}
@@ -142,7 +142,7 @@ export default function HomeContent() {
             </div>
             <div className="text-center">
               <p className="text-lg">Estimated Earnings:</p>
-              <p className="text-3xl font-bold text-green-600">${calculateEarnings()}</p>
+              <p className="text-3xl font-bold text-green-600">₹{calculateEarnings()}</p>
               <p className="text-sm text-gray-500">*Based on average yields and current market prices</p>
             </div>
           </div>
@@ -155,15 +155,16 @@ export default function HomeContent() {
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              quote: "Joining the contract farming program was the best decision I've made for my farm. The stable income and expert support have transformed my business.",
-              author: "John Doe",
-              crop: "Wheat Farmer"
+              "quote": "Joining the contract farming program was the best decision I've made for my farm. The stable income and expert support have transformed my business.",
+              "author": "Rajesh Kumar",
+              "crop": "Wheat Farmer"
             },
             {
-              quote: "I was skeptical at first, but the guaranteed market and access to modern technology have increased my yields and profits significantly.",
-              author: "Jane Smith",
-              crop: "Corn Farmer"
+              "quote": "I was skeptical at first, but the guaranteed market and access to modern technology have increased my yields and profits significantly.",
+              "author": "Anita Sharma",
+              "crop": "Corn Farmer"
             }
+            
           ].map((testimonial, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-300">
               <p className="italic mb-4">{testimonial.quote}</p>

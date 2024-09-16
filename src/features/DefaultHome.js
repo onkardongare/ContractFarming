@@ -1,6 +1,7 @@
 import  { React ,useState } from 'react';
 import { Link } from 'react-router-dom';
 import backgroundImage from './imgs/contract.png'
+import logo from '../assets/logo192.png'
 
 const DefaultHome = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
@@ -20,12 +21,12 @@ const DefaultHome = () => {
     <div className={`font-sans bg-gray-900 text-white }`}>
       <header className="p-4 flex justify-between items-center bg-green-600 text-white pb-6">
         <Link to="/">
-          <p className="text-2xl font-semibold md:hidden">
-            🌱 
-          </p>
-          <p className="text-2xl font-semibold font-sans ml-2 hidden md:block">
-            🌱 Assured Contract Farming
-          </p>
+          <span className="flex items-center ml-5">
+            <img className="size-11 font-semibold " src={logo} alt="Logo" />
+            <p className="text-2xl font-semibold font-sans ml-2 hidden md:block">
+              KRISHIKARAR
+            </p>
+          </span>
         </Link>
 
         <nav className="flex items-center gap-4">
