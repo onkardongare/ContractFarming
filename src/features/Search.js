@@ -29,7 +29,7 @@ export default function Search() {
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Search for buyers"
+                    placeholder="Search for specific buyers"
                     className="pr-12 w-full rounded-md"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}

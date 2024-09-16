@@ -42,7 +42,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-          <p className="text-sm text-gray-500">© 2024 KRISHIKARAR. All rights reserved.</p>
+          <p className="text-sm text-gray-500">© 2024 KRISHIKARAR. <br/><br/> All rights reserved.</p>
         </div>
       </div>
     </footer>
