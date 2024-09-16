@@ -77,7 +77,7 @@ export default function HomeContent() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Stable Income</h3>
                 <p className="text-gray-600 mb-4">Secure your financial future with predetermined prices.</p>
-                <p className="text-4xl mb-4 text-green-600" >₹</p>
+                <p className="text-5xl mb-4 text-green-600" >₹</p>
                 <p>With contract farming, you'll know your income before you even plant. Our agreements guarantee a fair price for your crops, protecting you from market fluctuations.</p>
               </div>
             )}
