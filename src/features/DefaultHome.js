@@ -19,7 +19,7 @@ const DefaultHome = () => {
 
   return (
     <div className={`font-sans bg-gray-900 text-white }`}>
-      <header className="p-4 flex justify-between items-center bg-green-600 text-white pb-6">
+      <header className="p-4 flex justify-between items-center bg-green-600 text-white">
         <Link to="/">
           <span className="flex items-center ml-5">
             <img className="size-11 font-semibold " src={logo} alt="Logo" />
@@ -30,13 +30,13 @@ const DefaultHome = () => {
         </Link>
 
         <nav className="flex items-center gap-4">
-          <Link to="/" className='ml-4 hover:underline hidden sm:block'>
+          <Link to="/" className='ml-4 text-xl hover:underline hidden sm:block'>
             Home
           </Link>
-          <Link to="/about" className='ml-4 hover:underline'>
+          <Link to="/about" className='ml-4 text-xl hover:underline'>
             About
           </Link>
-          <Link to="/contact" className='ml-4 mr-3 hover:underline'>
+          <Link to="/contact" className='ml-4 text-xl mr-3 hover:underline'>
             Contact
           </Link>
           <Link to="/login">

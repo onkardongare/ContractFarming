@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import ProfileLogo from '../assets/profilelogo.svg'
+import Navbar2 from "./Navbar2"
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -93,32 +94,7 @@ export default function Search() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="p-4 flex justify-between items-center bg-green-600 text-white pb-6">
-        <Link to="/">
-          <p className="text-2xl font-semibold md:hidden">
-            🌱 
-          </p>
-          <p className="text-2xl font-semibold font-sans ml-2 hidden md:block">
-            🌱 Assured Contract Farming
-          </p>
-        </Link>
-
-        <nav className="flex items-center gap-4">
-          <Link to="/about" className='ml-4 hover:underline'>
-            About
-          </Link>
-          <Link to="/contact" className='ml-4 mr-3 hover:underline'>
-            How It Works
-          </Link>
-          <Link to="/login">
-            <img 
-              src={ProfileLogo} alt="profilelogo"
-              className="h-6 w-6 mr-2 ">
-            </img>
-          </Link>
-        </nav>
-      </header>
-
+      <Navbar2/>
       <main className="flex-1">
         <section className="bg-primary py-12 md:py-10">
           <div className="container mx-auto px-4 md:px-6">

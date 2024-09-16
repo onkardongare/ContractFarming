@@ -1,25 +1,26 @@
-import React, { useState } from 'react'
-import { ArrowRight, Leaf, DollarSign, Users, BarChart, FileText, Search, PlusCircle } from 'lucide-react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Leaf, DollarSign, Users, BarChart, FileText, Search, PlusCircle } from 'lucide-react';
 
 export default function HomeContent() {
-  const [acres, setAcres] = useState('1')
-  const [crop, setCrop] = useState('wheat')
-  const [activeCard, setActiveCard] = useState(null)
-  const [activeTab, setActiveTab] = useState('income')
+  const [acres, setAcres] = useState('1');
+  const [crop, setCrop] = useState('wheat');
+  const [activeCard, setActiveCard] = useState(null);
+  const [activeTab, setActiveTab] = useState('income');
 
   const calculateEarnings = () => {
     const baseEarnings = {
       wheat: 60000,
       corn: 70000,
       soybeans: 19000
-    }
-    return (parseFloat(acres) * baseEarnings[crop]).toFixed(2)
-  }
+    };
+    return (parseFloat(acres) * baseEarnings[crop]).toFixed(2);
+  };
 
-  const handleCardClick = (cardType) => {
-    setActiveCard(cardType)
-    alert(`You've chosen to ${cardType.toLowerCase()}. This feature is coming soon!`)
-  }
+  // const handleCardClick = (cardType) => {
+  //   setActiveCard(cardType);
+  //   alert(`You've chosen to ${cardType.toLowerCase()}. This feature is coming soon!`);
+  // };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -34,7 +35,7 @@ export default function HomeContent() {
             <div 
               key={index} 
               className={`cursor-pointer transition-all duration-300 bg-white rounded-lg shadow-md p-6 ${activeCard === action ? 'ring-2 ring-blue-500' : ''}`}
-              onClick={() => handleCardClick(action)}
+              // onClick={() => handleCardClick(action)}
             >
               <h3 className="text-lg font-semibold mb-2">{action}</h3>
               <p className="text-sm text-gray-600 mb-4">
@@ -47,10 +48,10 @@ export default function HomeContent() {
                 {action === 'Find Buyers' &&  <Search className="h-12 w-12 text-green-600" />}  
                 {action === 'Create Contract' && <PlusCircle className="h-12 w-12 text-purple-600" />}
               </div>
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-md flex items-center justify-center w-full">
+              <Link to={`/${action === 'Find Buyers' ? 'search' : action.replace(' ', '').toLowerCase()}`} className="bg-blue-500 text-white px-4 py-2 rounded-md flex items-center justify-center w-full">
                 {action}
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
+              </Link>
             </div>
           ))}
         </div>
@@ -76,7 +77,7 @@ export default function HomeContent() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Stable Income</h3>
                 <p className="text-gray-600 mb-4">Secure your financial future with predetermined prices.</p>
-                <p className="h-12 w-12 mb-4 text-4xl text-green-600"> ₹</p>
+                <p className="text-4xl mb-4 text-green-600" >₹</p>
                 <p>With contract farming, you'll know your income before you even plant. Our agreements guarantee a fair price for your crops, protecting you from market fluctuations.</p>
               </div>
             )}
@@ -164,7 +165,6 @@ export default function HomeContent() {
               "author": "Anita Sharma",
               "crop": "Corn Farmer"
             }
-            
           ].map((testimonial, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-300">
               <p className="italic mb-4">{testimonial.quote}</p>
