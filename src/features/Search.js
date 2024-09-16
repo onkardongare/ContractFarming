@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ProfileLogo from '../assets/profilelogo.svg';
 import Navbar2 from "./Navbar2";
 import BuyerCard from "./buyercard";
+import filtersymbol from "../assets/filter.svg";
+import sortsymbol from "../assets/sort-alt.svg";
 
 const buyers = [
   { name: 'Global Grocers', type: 'Wholesale Buyer', location: 'Mumbai, Maharashtra' },
@@ -13,7 +14,7 @@ const buyers = [
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [sortBy, setSortBy] = useState("featured");
+  const [sortBy, setSortBy] = useState("sort by");
   const [filterBy, setFilterBy] = useState("");
   const [locationFilter, setLocationFilter] = useState("");
 
@@ -44,31 +45,45 @@ export default function Search() {
                 <p className="text-muted-foreground text-gray-700 ml-4 hidden md:block">
                   Filter your search to find the perfect buyers
                 </p>
-                <div className="flex flex-col md:flex-row items-center gap-4">
-                  <select
-                    className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    value={filterBy}
-                    onChange={(e) => setFilterBy(e.target.value)}
-                  >
-                    <option value="">Filter by</option>
-                    <option value="wholesale">Wholesale Buyer</option>
-                    <option value="retail">Retail Buyer</option>
-                    <option value="export">Export Buyer</option>
-                    <option value="local">Local Buyer</option>
-                  </select>
-                  <select
-                    className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
+                  <div className="relative w-full md:w-auto">
+                    <img src={filtersymbol} alt="Filter" className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4" />
+                    <select
+                      className="pl-10 pr-10 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full md:w-auto"
+                      value={filterBy}
+                      onChange={(e) => setFilterBy(e.target.value)}
+                    >
+                      <option value="">Filter by</option>
+                      <option value="all">All</option>
+                      <option value="grocery">Grocery Stores</option>
+                      <option value="dairies">Dairies</option>
+                      <option value="supermarkets">Supermarkets</option>
+                      <option value="fruit">Fruit Shops</option>
+                      <option value="spice">Spice Wholesalers</option>
+                      <option value="organic">Organic Grocers</option>
+                    </select>
+
+                  </div>
+                  <div className="relative w-full md:w-auto">
+                    <img src={sortsymbol} alt="Sort" className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4" />
+                    <select
+                    className="pl-10 pr-10 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full md:w-auto"
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                   >
-                    <option value="featured">Sort by</option>
-                    <option value="name">Name</option>
+                    <option value="sort by">Sort by</option>
+                    <option value="featured">Featured</option>
+                    <option value="newest">Newest</option>
+                    <option value="ratingLowToHigh">Rating: Low to High</option>
+                    <option value="ratingHighToLow">Rating: High to Low</option>
                     <option value="location">Location</option>
                   </select>
+
+                  </div>
                   <input
                     type="text"
                     placeholder="Search by location"
-                    className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full md:w-auto"
                     value={locationFilter}
                     onChange={(e) => setLocationFilter(e.target.value)}
                   />
