@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Leaf, DollarSign, Users, BarChart, FileText, Search, PlusCircle } from 'lucide-react';
+import { ArrowRight, Leaf , Users, BarChart, FileText, Search, PlusCircle } from 'lucide-react';
 
 export default function HomeContent() {
   const [acres, setAcres] = useState('1');
@@ -12,7 +12,8 @@ export default function HomeContent() {
     const baseEarnings = {
       wheat: 60000,
       corn: 70000,
-      soybeans: 19000
+      soybeans: 19000,
+      greenpeas: 200000 
     };
     return (parseFloat(acres) * baseEarnings[crop]).toFixed(2);
   };
@@ -138,6 +139,7 @@ export default function HomeContent() {
                   <option value="wheat">Wheat</option>
                   <option value="corn">Corn</option>
                   <option value="soybeans">Soybeans</option>
+                  <option value="greenpeas">Green Peas</option>
                 </select>
               </div>
             </div>
