@@ -1,4 +1,4 @@
-# Krishikarar
+# Krishi karar
 
 Krishikarar is an Assured Contract Farming System designed to connect farmers and buyers through secure contracts, ensuring a guaranteed market for crops. The platform leverages AI for real-time market trends, weather forecasts, and quality checks, and incorporates blockchain technology for transparent and secure transactions.
 
